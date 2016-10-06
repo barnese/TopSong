@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "LastFMAccessManager.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,12 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    LastFMAccessManager *lastFMAccessManager = [LastFMAccessManager sharedManager];
+    
+    NSLog(@"ClientID = %@", lastFMAccessManager.clientID);
+    NSLog(@"ClientSecret = %@", lastFMAccessManager.clientSecret);
+    
     return YES;
 }
 
