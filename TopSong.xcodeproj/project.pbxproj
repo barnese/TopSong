@@ -132,6 +132,7 @@
 		F0E2BFD51DA6A73900A69C11 /* TopSong */ = {
 			isa = PBXGroup;
 			children = (
+				F0E2BFD61DA6A73900A69C11 /* Supporting Files */,
 				F0E2BFD91DA6A73900A69C11 /* AppDelegate.h */,
 				F0E2BFDA1DA6A73900A69C11 /* AppDelegate.m */,
 				F0E2BFDC1DA6A73900A69C11 /* ViewController.h */,
@@ -139,7 +140,6 @@
 				F0E2BFDF1DA6A73900A69C11 /* Main.storyboard */,
 				F0E2BFE21DA6A73900A69C11 /* Assets.xcassets */,
 				F0E2BFE41DA6A73900A69C11 /* LaunchScreen.storyboard */,
-				F0E2BFD61DA6A73900A69C11 /* Supporting Files */,
 				F0E2C00D1DA6AC2200A69C11 /* LastFMAccessManager.h */,
 				F0E2C00E1DA6AC5700A69C11 /* LastFMAccessManager.m */,
 			);
