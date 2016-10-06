@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F328B58F6F489C1376DDEA5 /* Pods_TopSong.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85BDDC5E1C654FF20DFA641C /* Pods_TopSong.framework */; };
 		F0E2BFD81DA6A73900A69C11 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E2BFD71DA6A73900A69C11 /* main.m */; };
 		F0E2BFDB1DA6A73900A69C11 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E2BFDA1DA6A73900A69C11 /* AppDelegate.m */; };
 		F0E2BFDE1DA6A73900A69C11 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E2BFDD1DA6A73900A69C11 /* ViewController.m */; };
@@ -15,6 +16,8 @@
 		F0E2BFE61DA6A73900A69C11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0E2BFE41DA6A73900A69C11 /* LaunchScreen.storyboard */; };
 		F0E2BFF11DA6A73A00A69C11 /* TopSongTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E2BFF01DA6A73A00A69C11 /* TopSongTests.m */; };
 		F0E2BFFC1DA6A73A00A69C11 /* TopSongUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E2BFFB1DA6A73A00A69C11 /* TopSongUITests.m */; };
+		F0E2C00A1DA6A8DC00A69C11 /* Configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = F0E2C0091DA6A8DC00A69C11 /* Configuration.plist */; };
+		F0E2C00C1DA6A93000A69C11 /* Configuration.plist.example in Resources */ = {isa = PBXBuildFile; fileRef = F0E2C00B1DA6A93000A69C11 /* Configuration.plist.example */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5E944FF201F6C7216513E40C /* Pods-TopSong.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopSong.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TopSong/Pods-TopSong.debug.xcconfig"; sourceTree = "<group>"; };
+		85BDDC5E1C654FF20DFA641C /* Pods_TopSong.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TopSong.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93F6AFE5306705385972E924 /* Pods-TopSong.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopSong.release.xcconfig"; path = "Pods/Target Support Files/Pods-TopSong/Pods-TopSong.release.xcconfig"; sourceTree = "<group>"; };
 		F0E2BFD31DA6A73900A69C11 /* TopSong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopSong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0E2BFD71DA6A73900A69C11 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F0E2BFD91DA6A73900A69C11 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +57,8 @@
 		F0E2BFF71DA6A73A00A69C11 /* TopSongUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TopSongUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0E2BFFB1DA6A73A00A69C11 /* TopSongUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TopSongUITests.m; sourceTree = "<group>"; };
 		F0E2BFFD1DA6A73A00A69C11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0E2C0091DA6A8DC00A69C11 /* Configuration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Configuration.plist; sourceTree = "<group>"; };
+		F0E2C00B1DA6A93000A69C11 /* Configuration.plist.example */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Configuration.plist.example; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F328B58F6F489C1376DDEA5 /* Pods_TopSong.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +87,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0DE6031C11FEB1B76D17BBA3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				85BDDC5E1C654FF20DFA641C /* Pods_TopSong.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E4BF69FDE203C5D846BA51BF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5E944FF201F6C7216513E40C /* Pods-TopSong.debug.xcconfig */,
+				93F6AFE5306705385972E924 /* Pods-TopSong.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F0E2BFCA1DA6A73900A69C11 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +111,8 @@
 				F0E2BFEF1DA6A73A00A69C11 /* TopSongTests */,
 				F0E2BFFA1DA6A73A00A69C11 /* TopSongUITests */,
 				F0E2BFD41DA6A73900A69C11 /* Products */,
+				E4BF69FDE203C5D846BA51BF /* Pods */,
+				0DE6031C11FEB1B76D17BBA3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,7 +136,6 @@
 				F0E2BFDF1DA6A73900A69C11 /* Main.storyboard */,
 				F0E2BFE21DA6A73900A69C11 /* Assets.xcassets */,
 				F0E2BFE41DA6A73900A69C11 /* LaunchScreen.storyboard */,
-				F0E2BFE71DA6A73900A69C11 /* Info.plist */,
 				F0E2BFD61DA6A73900A69C11 /* Supporting Files */,
 			);
 			path = TopSong;
@@ -117,7 +144,10 @@
 		F0E2BFD61DA6A73900A69C11 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F0E2BFE71DA6A73900A69C11 /* Info.plist */,
 				F0E2BFD71DA6A73900A69C11 /* main.m */,
+				F0E2C0091DA6A8DC00A69C11 /* Configuration.plist */,
+				F0E2C00B1DA6A93000A69C11 /* Configuration.plist.example */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -147,9 +177,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F0E2C0001DA6A73A00A69C11 /* Build configuration list for PBXNativeTarget "TopSong" */;
 			buildPhases = (
+				D07D8DEF551295616558C011 /* [CP] Check Pods Manifest.lock */,
 				F0E2BFCF1DA6A73900A69C11 /* Sources */,
 				F0E2BFD01DA6A73900A69C11 /* Frameworks */,
 				F0E2BFD11DA6A73900A69C11 /* Resources */,
+				1661A904BA9E608D7A61F7B5 /* [CP] Embed Pods Frameworks */,
+				82A4797039502A211CC5C893 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -250,6 +283,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0E2BFE61DA6A73900A69C11 /* LaunchScreen.storyboard in Resources */,
+				F0E2C00A1DA6A8DC00A69C11 /* Configuration.plist in Resources */,
+				F0E2C00C1DA6A93000A69C11 /* Configuration.plist.example in Resources */,
 				F0E2BFE31DA6A73900A69C11 /* Assets.xcassets in Resources */,
 				F0E2BFE11DA6A73900A69C11 /* Main.storyboard in Resources */,
 			);
@@ -270,6 +305,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1661A904BA9E608D7A61F7B5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TopSong/Pods-TopSong-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		82A4797039502A211CC5C893 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TopSong/Pods-TopSong-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D07D8DEF551295616558C011 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F0E2BFCF1DA6A73900A69C11 /* Sources */ = {
@@ -423,10 +506,12 @@
 		};
 		F0E2C0011DA6A73A00A69C11 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E944FF201F6C7216513E40C /* Pods-TopSong.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = L3F768QJHL;
 				INFOPLIST_FILE = TopSong/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mteric.TopSong;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -435,10 +520,12 @@
 		};
 		F0E2C0021DA6A73A00A69C11 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93F6AFE5306705385972E924 /* Pods-TopSong.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = L3F768QJHL;
 				INFOPLIST_FILE = TopSong/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mteric.TopSong;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -514,6 +601,7 @@
 				F0E2C0021DA6A73A00A69C11 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F0E2C0031DA6A73A00A69C11 /* Build configuration list for PBXNativeTarget "TopSongTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +610,7 @@
 				F0E2C0051DA6A73A00A69C11 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F0E2C0061DA6A73A00A69C11 /* Build configuration list for PBXNativeTarget "TopSongUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +619,7 @@
 				F0E2C0081DA6A73A00A69C11 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

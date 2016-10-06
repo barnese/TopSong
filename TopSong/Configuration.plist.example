@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+Configuration.plist.example
+Example of API key configuration property list.
+-->
+<plist version="1.0">
+<dict>
+<key>LastFmAPI</key>
+<dict>
+<key>ClientID</key>
+<string>YOUR CLIENT ID HERE</string>
+<key>ClientSecret</key>
+<string>YOUR CLIENT SECRET HERE</string>
+</dict>
+</dict>
+</plist>
