@@ -19,6 +19,7 @@
 		F0E2C00A1DA6A8DC00A69C11 /* Configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = F0E2C0091DA6A8DC00A69C11 /* Configuration.plist */; };
 		F0E2C00C1DA6A93000A69C11 /* Configuration.plist.example in Resources */ = {isa = PBXBuildFile; fileRef = F0E2C00B1DA6A93000A69C11 /* Configuration.plist.example */; };
 		F0E2C00F1DA6AC5700A69C11 /* LastFMAccessManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E2C00E1DA6AC5700A69C11 /* LastFMAccessManager.m */; };
+		F0E2C0131DA7335000A69C11 /* KeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E2C0121DA7335000A69C11 /* KeychainWrapper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 		F0E2C00B1DA6A93000A69C11 /* Configuration.plist.example */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Configuration.plist.example; sourceTree = "<group>"; };
 		F0E2C00D1DA6AC2200A69C11 /* LastFMAccessManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LastFMAccessManager.h; sourceTree = "<group>"; };
 		F0E2C00E1DA6AC5700A69C11 /* LastFMAccessManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LastFMAccessManager.m; sourceTree = "<group>"; };
+		F0E2C0111DA7335000A69C11 /* KeychainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainWrapper.h; sourceTree = "<group>"; };
+		F0E2C0121DA7335000A69C11 /* KeychainWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainWrapper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +135,7 @@
 		F0E2BFD51DA6A73900A69C11 /* TopSong */ = {
 			isa = PBXGroup;
 			children = (
+				F0E2C0101DA732CF00A69C11 /* DataAccess */,
 				F0E2BFD61DA6A73900A69C11 /* Supporting Files */,
 				F0E2BFD91DA6A73900A69C11 /* AppDelegate.h */,
 				F0E2BFDA1DA6A73900A69C11 /* AppDelegate.m */,
@@ -140,8 +144,6 @@
 				F0E2BFDF1DA6A73900A69C11 /* Main.storyboard */,
 				F0E2BFE21DA6A73900A69C11 /* Assets.xcassets */,
 				F0E2BFE41DA6A73900A69C11 /* LaunchScreen.storyboard */,
-				F0E2C00D1DA6AC2200A69C11 /* LastFMAccessManager.h */,
-				F0E2C00E1DA6AC5700A69C11 /* LastFMAccessManager.m */,
 			);
 			path = TopSong;
 			sourceTree = "<group>";
@@ -173,6 +175,17 @@
 				F0E2BFFD1DA6A73A00A69C11 /* Info.plist */,
 			);
 			path = TopSongUITests;
+			sourceTree = "<group>";
+		};
+		F0E2C0101DA732CF00A69C11 /* DataAccess */ = {
+			isa = PBXGroup;
+			children = (
+				F0E2C0111DA7335000A69C11 /* KeychainWrapper.h */,
+				F0E2C0121DA7335000A69C11 /* KeychainWrapper.m */,
+				F0E2C00D1DA6AC2200A69C11 /* LastFMAccessManager.h */,
+				F0E2C00E1DA6AC5700A69C11 /* LastFMAccessManager.m */,
+			);
+			name = DataAccess;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -368,6 +381,7 @@
 				F0E2BFDE1DA6A73900A69C11 /* ViewController.m in Sources */,
 				F0E2BFDB1DA6A73900A69C11 /* AppDelegate.m in Sources */,
 				F0E2BFD81DA6A73900A69C11 /* main.m in Sources */,
+				F0E2C0131DA7335000A69C11 /* KeychainWrapper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
