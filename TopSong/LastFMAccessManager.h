@@ -11,8 +11,8 @@
 @interface LastFMAccessManager : NSObject {
 }
 
-@property (nonatomic, retain) NSString *clientID;
-@property (nonatomic, retain) NSString *clientSecret;
+@property (nonatomic, retain) NSString *apiKey;
+@property (nonatomic, retain) NSString *apiSecret;
 
 + (id)sharedManager;
 

@@ -11,12 +11,12 @@
 @implementation LastFMAccessManager
 
 + (id)sharedManager {
-    static LastFMAccessManager *manager = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        manager = [[self alloc] init];
+    static LastFMAccessManager *_sharedInstance = nil;
+    static dispatch_once_t oncePredicate;
+    dispatch_once(&oncePredicate, ^{
+        _sharedInstance = [[self alloc] init];
     });
-    return manager;
+    return _sharedInstance;
 }
 
 - (id)init {
@@ -24,8 +24,8 @@
         NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"Configuration" ofType:@"plist"];
         NSDictionary *configuration = [[NSDictionary alloc] initWithContentsOfFile:plistPath];
         
-        self.clientID = configuration[@"LastFmAPI"][@"ClientID"];
-        self.clientSecret = configuration[@"LastFmAPI"][@"ClientSecret"];        
+        self.apiKey = configuration[@"LastFmAPI"][@"APIKey"];
+        self.apiSecret = configuration[@"LastFmAPI"][@"APISecret"];
     }
     return self;
 }

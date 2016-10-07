@@ -36,7 +36,7 @@
     LastFMAccessManager *lastFM = [LastFMAccessManager sharedManager];
     
     // Append the secret to the signature.
-    [apiSig appendString:lastFM.clientSecret];
+    [apiSig appendString:lastFM.apiSecret];
     
     // MD5 hash the signature.
     return [apiSig md5];
@@ -54,7 +54,7 @@
     
     [parameters addEntriesFromDictionary:@{@"username": userName,
                                            @"password": password,
-                                           @"api_key": lastFM.clientID,
+                                           @"api_key": lastFM.apiKey,
                                            @"method": @"auth.getMobileSession",
                                            }];
     
@@ -62,7 +62,7 @@
     NSString *apiSignature = [self generateApiSigForParameters:parameters];
     [parameters setObject:apiSignature forKey:@"api_signature"];
 
-    NSString *url = [NSString stringWithFormat:@"%@?method=auth.getMobileSession&username=%@&password=%@&api_key=%@&api_sig=%@&format=json", kLastFMRootURL, userName, password, lastFM.clientID, apiSignature];
+    NSString *url = [NSString stringWithFormat:@"%@?method=auth.getMobileSession&username=%@&password=%@&api_key=%@&api_sig=%@&format=json", kLastFMRootURL, userName, password, lastFM.apiKey, apiSignature];
 
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
 
