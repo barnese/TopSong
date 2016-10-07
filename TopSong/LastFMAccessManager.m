@@ -25,7 +25,7 @@
         NSDictionary *configuration = [[NSDictionary alloc] initWithContentsOfFile:plistPath];
         
         self.clientID = configuration[@"LastFmAPI"][@"ClientID"];
-        self.clientSecret = configuration[@"LastFmAPI"][@"ClientSecret"];
+        self.clientSecret = configuration[@"LastFmAPI"][@"ClientSecret"];        
     }
     return self;
 }
