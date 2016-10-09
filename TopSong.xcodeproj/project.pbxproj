@@ -10,20 +10,20 @@
 		0F328B58F6F489C1376DDEA5 /* Pods_TopSong.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85BDDC5E1C654FF20DFA641C /* Pods_TopSong.framework */; };
 		F047258A1DA9C7B700DD001B /* LastFMAccessManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F04725871DA9C7B700DD001B /* LastFMAccessManager.m */; };
 		F047258B1DA9C7B700DD001B /* LastFMDataAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = F04725891DA9C7B700DD001B /* LastFMDataAccess.m */; };
+		F04725911DA9C8E500DD001B /* KeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = F047258E1DA9C8E500DD001B /* KeychainWrapper.m */; };
+		F04725921DA9C8E500DD001B /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = F04725901DA9C8E500DD001B /* NSString+MD5.m */; };
+		F047259A1DA9C97D00DD001B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F04725941DA9C97D00DD001B /* Assets.xcassets */; };
+		F047259B1DA9C97D00DD001B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F04725961DA9C97D00DD001B /* LoginViewController.m */; };
+		F047259C1DA9C97D00DD001B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F04725971DA9C97D00DD001B /* Main.storyboard */; };
+		F047259D1DA9C97D00DD001B /* TopSongViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F04725991DA9C97D00DD001B /* TopSongViewController.m */; };
 		F0E2BFD81DA6A73900A69C11 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E2BFD71DA6A73900A69C11 /* main.m */; };
 		F0E2BFDB1DA6A73900A69C11 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E2BFDA1DA6A73900A69C11 /* AppDelegate.m */; };
-		F0E2BFDE1DA6A73900A69C11 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E2BFDD1DA6A73900A69C11 /* LoginViewController.m */; };
 		F0E2BFE11DA6A73900A69C11 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0E2BFDF1DA6A73900A69C11 /* Login.storyboard */; };
-		F0E2BFE31DA6A73900A69C11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0E2BFE21DA6A73900A69C11 /* Assets.xcassets */; };
 		F0E2BFE61DA6A73900A69C11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0E2BFE41DA6A73900A69C11 /* LaunchScreen.storyboard */; };
 		F0E2BFF11DA6A73A00A69C11 /* TopSongTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E2BFF01DA6A73A00A69C11 /* TopSongTests.m */; };
 		F0E2BFFC1DA6A73A00A69C11 /* TopSongUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E2BFFB1DA6A73A00A69C11 /* TopSongUITests.m */; };
 		F0E2C00A1DA6A8DC00A69C11 /* Configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = F0E2C0091DA6A8DC00A69C11 /* Configuration.plist */; };
 		F0E2C00C1DA6A93000A69C11 /* Configuration.plist.example in Resources */ = {isa = PBXBuildFile; fileRef = F0E2C00B1DA6A93000A69C11 /* Configuration.plist.example */; };
-		F0E2C0131DA7335000A69C11 /* KeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E2C0121DA7335000A69C11 /* KeychainWrapper.m */; };
-		F0E2C0171DA74C9D00A69C11 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E2C0161DA74C9D00A69C11 /* NSString+MD5.m */; };
-		F0E2C01F1DA76B7E00A69C11 /* TopSongViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E2C01E1DA76B7E00A69C11 /* TopSongViewController.m */; };
-		F0E2C0211DA76E1700A69C11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0E2C0201DA76E1700A69C11 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,14 +51,21 @@
 		F04725871DA9C7B700DD001B /* LastFMAccessManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LastFMAccessManager.m; sourceTree = "<group>"; };
 		F04725881DA9C7B700DD001B /* LastFMDataAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LastFMDataAccess.h; sourceTree = "<group>"; };
 		F04725891DA9C7B700DD001B /* LastFMDataAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LastFMDataAccess.m; sourceTree = "<group>"; };
+		F047258D1DA9C8E500DD001B /* KeychainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainWrapper.h; sourceTree = "<group>"; };
+		F047258E1DA9C8E500DD001B /* KeychainWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainWrapper.m; sourceTree = "<group>"; };
+		F047258F1DA9C8E500DD001B /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
+		F04725901DA9C8E500DD001B /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
+		F04725941DA9C97D00DD001B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F04725951DA9C97D00DD001B /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		F04725961DA9C97D00DD001B /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		F04725971DA9C97D00DD001B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		F04725981DA9C97D00DD001B /* TopSongViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopSongViewController.h; sourceTree = "<group>"; };
+		F04725991DA9C97D00DD001B /* TopSongViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopSongViewController.m; sourceTree = "<group>"; };
 		F0E2BFD31DA6A73900A69C11 /* TopSong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopSong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0E2BFD71DA6A73900A69C11 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F0E2BFD91DA6A73900A69C11 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F0E2BFDA1DA6A73900A69C11 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F0E2BFDC1DA6A73900A69C11 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		F0E2BFDD1DA6A73900A69C11 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		F0E2BFE01DA6A73900A69C11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
-		F0E2BFE21DA6A73900A69C11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F0E2BFE51DA6A73900A69C11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F0E2BFE71DA6A73900A69C11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F0E2BFEC1DA6A73A00A69C11 /* TopSongTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TopSongTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,14 +76,7 @@
 		F0E2BFFD1DA6A73A00A69C11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F0E2C0091DA6A8DC00A69C11 /* Configuration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Configuration.plist; sourceTree = "<group>"; };
 		F0E2C00B1DA6A93000A69C11 /* Configuration.plist.example */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Configuration.plist.example; sourceTree = "<group>"; };
-		F0E2C0111DA7335000A69C11 /* KeychainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainWrapper.h; sourceTree = "<group>"; };
-		F0E2C0121DA7335000A69C11 /* KeychainWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainWrapper.m; sourceTree = "<group>"; };
-		F0E2C0151DA74C1A00A69C11 /* NSString+MD5.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
-		F0E2C0161DA74C9D00A69C11 /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
 		F0E2C01B1DA764ED00A69C11 /* TopSong.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TopSong.entitlements; sourceTree = "<group>"; };
-		F0E2C01D1DA76B4600A69C11 /* TopSongViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TopSongViewController.h; sourceTree = "<group>"; };
-		F0E2C01E1DA76B7E00A69C11 /* TopSongViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopSongViewController.m; sourceTree = "<group>"; };
-		F0E2C0201DA76E1700A69C11 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +133,30 @@
 			path = DataAccess;
 			sourceTree = "<group>";
 		};
+		F047258C1DA9C8BF00DD001B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F047258D1DA9C8E500DD001B /* KeychainWrapper.h */,
+				F047258E1DA9C8E500DD001B /* KeychainWrapper.m */,
+				F047258F1DA9C8E500DD001B /* NSString+MD5.h */,
+				F04725901DA9C8E500DD001B /* NSString+MD5.m */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		F04725931DA9C91500DD001B /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				F04725941DA9C97D00DD001B /* Assets.xcassets */,
+				F04725951DA9C97D00DD001B /* LoginViewController.h */,
+				F04725961DA9C97D00DD001B /* LoginViewController.m */,
+				F04725971DA9C97D00DD001B /* Main.storyboard */,
+				F04725981DA9C97D00DD001B /* TopSongViewController.h */,
+				F04725991DA9C97D00DD001B /* TopSongViewController.m */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		F0E2BFCA1DA6A73900A69C11 = {
 			isa = PBXGroup;
 			children = (
@@ -158,9 +182,11 @@
 		F0E2BFD51DA6A73900A69C11 /* TopSong */ = {
 			isa = PBXGroup;
 			children = (
+				F04725931DA9C91500DD001B /* UI */,
+				F0E2BFDF1DA6A73900A69C11 /* Login.storyboard */,
+				F0E2BFE41DA6A73900A69C11 /* LaunchScreen.storyboard */,
+				F047258C1DA9C8BF00DD001B /* Helpers */,
 				F04725851DA9C78300DD001B /* DataAccess */,
-				F0E2C0141DA74C0900A69C11 /* Helpers */,
-				F0E2C01C1DA76AEC00A69C11 /* UI */,
 				F0E2BFD61DA6A73900A69C11 /* Supporting Files */,
 				F0E2BFD91DA6A73900A69C11 /* AppDelegate.h */,
 				F0E2BFDA1DA6A73900A69C11 /* AppDelegate.m */,
@@ -196,32 +222,6 @@
 				F0E2BFFD1DA6A73A00A69C11 /* Info.plist */,
 			);
 			path = TopSongUITests;
-			sourceTree = "<group>";
-		};
-		F0E2C0141DA74C0900A69C11 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				F0E2C0111DA7335000A69C11 /* KeychainWrapper.h */,
-				F0E2C0121DA7335000A69C11 /* KeychainWrapper.m */,
-				F0E2C0151DA74C1A00A69C11 /* NSString+MD5.h */,
-				F0E2C0161DA74C9D00A69C11 /* NSString+MD5.m */,
-			);
-			name = Helpers;
-			sourceTree = "<group>";
-		};
-		F0E2C01C1DA76AEC00A69C11 /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				F0E2BFE21DA6A73900A69C11 /* Assets.xcassets */,
-				F0E2BFDF1DA6A73900A69C11 /* Login.storyboard */,
-				F0E2C0201DA76E1700A69C11 /* Main.storyboard */,
-				F0E2BFE41DA6A73900A69C11 /* LaunchScreen.storyboard */,
-				F0E2BFDC1DA6A73900A69C11 /* LoginViewController.h */,
-				F0E2BFDD1DA6A73900A69C11 /* LoginViewController.m */,
-				F0E2C01D1DA76B4600A69C11 /* TopSongViewController.h */,
-				F0E2C01E1DA76B7E00A69C11 /* TopSongViewController.m */,
-			);
-			name = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -344,8 +344,8 @@
 				F0E2BFE61DA6A73900A69C11 /* LaunchScreen.storyboard in Resources */,
 				F0E2C00A1DA6A8DC00A69C11 /* Configuration.plist in Resources */,
 				F0E2C00C1DA6A93000A69C11 /* Configuration.plist.example in Resources */,
-				F0E2C0211DA76E1700A69C11 /* Main.storyboard in Resources */,
-				F0E2BFE31DA6A73900A69C11 /* Assets.xcassets in Resources */,
+				F047259C1DA9C97D00DD001B /* Main.storyboard in Resources */,
+				F047259A1DA9C97D00DD001B /* Assets.xcassets in Resources */,
 				F0E2BFE11DA6A73900A69C11 /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,13 +420,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F047258B1DA9C7B700DD001B /* LastFMDataAccess.m in Sources */,
-				F0E2C0171DA74C9D00A69C11 /* NSString+MD5.m in Sources */,
-				F0E2BFDE1DA6A73900A69C11 /* LoginViewController.m in Sources */,
-				F0E2C01F1DA76B7E00A69C11 /* TopSongViewController.m in Sources */,
+				F04725921DA9C8E500DD001B /* NSString+MD5.m in Sources */,
 				F0E2BFDB1DA6A73900A69C11 /* AppDelegate.m in Sources */,
+				F047259B1DA9C97D00DD001B /* LoginViewController.m in Sources */,
+				F04725911DA9C8E500DD001B /* KeychainWrapper.m in Sources */,
 				F047258A1DA9C7B700DD001B /* LastFMAccessManager.m in Sources */,
 				F0E2BFD81DA6A73900A69C11 /* main.m in Sources */,
-				F0E2C0131DA7335000A69C11 /* KeychainWrapper.m in Sources */,
+				F047259D1DA9C97D00DD001B /* TopSongViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
