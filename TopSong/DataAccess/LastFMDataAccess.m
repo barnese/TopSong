@@ -11,8 +11,10 @@
 #import "NSString+MD5.h"
 #import "AFNetworking.h"
 #import "KeychainWrapper.h"
+#import "Track.h"
 
-#define kLastFMRootURL @"https://ws.audioscrobbler.com/2.0/"
+#define kLastFMRootURL  @"https://ws.audioscrobbler.com/2.0/"
+#define kErrorDomain    @"DataAccess"
 
 @interface LastFMDataAccess()
 
@@ -49,7 +51,6 @@
     
     LastFMAccessManager *lastFM = [LastFMAccessManager sharedManager];
     
-    
     NSMutableDictionary *parameters = [[NSMutableDictionary alloc] init];
     
     [parameters addEntriesFromDictionary:@{@"username": userName,
@@ -67,8 +68,6 @@
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
 
     [manager POST:url parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
-        NSLog(@"JSON: %@", responseObject);
-        
         if ([responseObject isKindOfClass:[NSDictionary class]]) {
             NSDictionary *responseDict = responseObject;
         
@@ -90,13 +89,71 @@
             // Yay!
             success();
         } else {
-            // TODO: return a custom NSError object.
-            NSLog(@"Failed to parse auth.getMobileSession responseObject!");
-            failure(nil);
+            NSError *error = [NSError errorWithDomain:kErrorDomain code:100 userInfo:@{NSLocalizedDescriptionKey: @"Failed to parse auth.getMobileSession responseObject!"}];
+            failure(error);
         }
         
     } failure:^(NSURLSessionTask *operation, NSError *error) {
-        NSLog(@"Error: %@", error);
+        failure(error);
+    }];
+}
+
++ (void)getTopTracksForUserName:(NSString *)userName
+                        success:(void (^)(NSArray *))success
+                        failure:(void (^)(NSError *))failure {
+    
+    LastFMAccessManager *lastFM = [LastFMAccessManager sharedManager];
+
+    NSString *url = [NSString stringWithFormat:@"%@?method=user.gettoptracks&username=%@&limit=10&api_key=%@&format=json",
+                     kLastFMRootURL, userName, lastFM.apiKey];
+    
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    
+    [manager GET:url parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
+        if ([responseObject isKindOfClass:[NSDictionary class]]) {
+            NSDictionary *responseRoot = responseObject;
+            NSArray *responseTrackArray = [[responseRoot objectForKey:@"toptracks"] objectForKey:@"track"];
+            
+            NSMutableArray *tracks = [[NSMutableArray alloc] init];
+
+            for (NSDictionary *responseTrack in responseTrackArray) {
+                NSString *name = [responseTrack objectForKey:@"name"];
+                NSString *artist = [[responseTrack objectForKey:@"artist"] objectForKey:@"name"];
+                NSString *trackUrl = [responseTrack objectForKey:@"url"];
+                NSInteger playCount = [[responseTrack objectForKey:@"playcount"] integerValue];
+                NSInteger rank = [[[responseTrack objectForKey:@"@attr"] objectForKey:@"rank"] integerValue];
+                
+                Track *track = [[Track alloc] initWithTitle:name artist:artist trackUrl:trackUrl playCount:playCount rank:rank];
+
+                NSArray *responseImages = [responseTrack objectForKey:@"image"];
+                for (NSDictionary *responseImage in responseImages) {
+                    NSString *url = [responseImage objectForKey:@"#text"];
+                    NSString *size = [responseImage objectForKey:@"size"];
+                    NSInteger imageUrlSize;
+                    
+                    if ([size isEqualToString:@"small"]) {
+                        imageUrlSize = ImageUrlSizeSmall;
+                    } else if ([size isEqualToString:@"medium"]) {
+                        imageUrlSize = ImageUrlSizeMedium;
+                    } else if ([size isEqualToString:@"large"]) {
+                        imageUrlSize = ImageUrlSizeLarge;
+                    } else if ([size isEqualToString:@"extralarge"]) {
+                        imageUrlSize = ImageUrlSizeExtraLarge;
+                    }
+
+                    [track addImage:[[ImageUrl alloc] initWithUrl:url size:imageUrlSize]];
+                }
+                
+                [tracks addObject:track];
+            }
+            
+            success(tracks);
+        } else {
+            NSError *error = [NSError errorWithDomain:kErrorDomain code:101 userInfo:@{NSLocalizedDescriptionKey: @"Failed to parse top tracks responseObject!"}];
+            failure(error);
+        }
+        
+    } failure:^(NSURLSessionTask *operation, NSError *error) {
         failure(error);
     }];
 }

@@ -11,7 +11,11 @@
 @interface LastFMDataAccess : NSObject
 
 + (void)loginWithUserName:(NSString *)userName andPassword:(NSString *)password
-    success:(void (^)(void))success
-    failure:(void (^)(NSError *))failure;
+                  success:(void (^)(void))success
+                  failure:(void (^)(NSError *))failure;
+
++ (void)getTopTracksForUserName:(NSString *)userName
+                        success:(void (^)(NSArray *))success
+                        failure:(void (^)(NSError *))failure;
 
 @end
