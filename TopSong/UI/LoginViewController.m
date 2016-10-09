@@ -40,9 +40,9 @@
     }
 
     [LastFMDataAccess loginWithUserName:userName andPassword:password success:^{
-        NSLog(@"Success!");
+        [self.delegate loginViewControllerDidFinish];
     } failure:^(NSError *error) {
-        NSLog(@"Error: %@", error);
+        NSLog(@"Error: %@", error); // TODO
     }];
 }
 

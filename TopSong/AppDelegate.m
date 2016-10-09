@@ -18,17 +18,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    BOOL isUserLoggedIn = [defaults objectForKey:@"IsUserLoggedIn"];
-    
-    if (isUserLoggedIn) {
-        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        TopSongViewController *viewController = [storyboard instantiateInitialViewController];
-        [self.window makeKeyAndVisible];
-        [self.window.rootViewController presentViewController:viewController animated:NO completion:nil];
-    }
-    
+        
     return YES;
 }
 
