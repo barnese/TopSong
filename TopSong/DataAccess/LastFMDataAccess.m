@@ -13,15 +13,15 @@
 #import "KeychainWrapper.h"
 #import "Track.h"
 
-#define kLastFMRootURL  @"https://ws.audioscrobbler.com/2.0/"
-#define kErrorDomain    @"DataAccess"
-
 @interface LastFMDataAccess()
 
 // Generates an MD5 hashed signature for Last.fm API calls.
 + (NSString *)generateApiSigForParameters:(NSDictionary *)parameters;
 
 @end
+
+NSString *const kLastFMRootURL = @"https://ws.audioscrobbler.com/2.0/";
+NSString *const kErrorDomain = @"DataAccess";
 
 @implementation LastFMDataAccess
 
