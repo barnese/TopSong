@@ -1,5 +1,5 @@
 //
-//  TopSongViewController.h
+//  TopSongCollectionViewController.h
 //  TopSong
 //
 //  Created by Eric Barnes on 10/6/16.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TopSongViewController : UIViewController
+@interface TopSongCollectionViewController : UICollectionViewController
 
 @end

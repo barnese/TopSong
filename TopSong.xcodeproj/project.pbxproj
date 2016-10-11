@@ -12,6 +12,8 @@
 		F0107F7F1DA9CB08003589BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0107F7D1DA9CB08003589BA /* LaunchScreen.storyboard */; };
 		F0107F831DA9CB6F003589BA /* Track.m in Sources */ = {isa = PBXBuildFile; fileRef = F0107F821DA9CB6F003589BA /* Track.m */; };
 		F0107F891DA9EA2B003589BA /* ImageUrl.m in Sources */ = {isa = PBXBuildFile; fileRef = F0107F881DA9EA2B003589BA /* ImageUrl.m */; };
+		F0107F911DACA5AD003589BA /* TrackComponent.mm in Sources */ = {isa = PBXBuildFile; fileRef = F0107F901DACA5AD003589BA /* TrackComponent.mm */; };
+		F0107F941DACA72B003589BA /* TrackContext.m in Sources */ = {isa = PBXBuildFile; fileRef = F0107F931DACA72B003589BA /* TrackContext.m */; };
 		F047258A1DA9C7B700DD001B /* LastFMAccessManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F04725871DA9C7B700DD001B /* LastFMAccessManager.m */; };
 		F047258B1DA9C7B700DD001B /* LastFMDataAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = F04725891DA9C7B700DD001B /* LastFMDataAccess.m */; };
 		F04725911DA9C8E500DD001B /* KeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = F047258E1DA9C8E500DD001B /* KeychainWrapper.m */; };
@@ -19,7 +21,7 @@
 		F047259A1DA9C97D00DD001B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F04725941DA9C97D00DD001B /* Assets.xcassets */; };
 		F047259B1DA9C97D00DD001B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F04725961DA9C97D00DD001B /* LoginViewController.m */; };
 		F047259C1DA9C97D00DD001B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F04725971DA9C97D00DD001B /* Main.storyboard */; };
-		F047259D1DA9C97D00DD001B /* TopSongViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F04725991DA9C97D00DD001B /* TopSongViewController.m */; };
+		F047259D1DA9C97D00DD001B /* TopSongCollectionViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = F04725991DA9C97D00DD001B /* TopSongCollectionViewController.mm */; };
 		F0E2BFD81DA6A73900A69C11 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E2BFD71DA6A73900A69C11 /* main.m */; };
 		F0E2BFDB1DA6A73900A69C11 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E2BFDA1DA6A73900A69C11 /* AppDelegate.m */; };
 		F0E2BFF11DA6A73A00A69C11 /* TopSongTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E2BFF01DA6A73A00A69C11 /* TopSongTests.m */; };
@@ -55,6 +57,10 @@
 		F0107F821DA9CB6F003589BA /* Track.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Track.m; sourceTree = "<group>"; };
 		F0107F871DA9EA2B003589BA /* ImageUrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageUrl.h; sourceTree = "<group>"; };
 		F0107F881DA9EA2B003589BA /* ImageUrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageUrl.m; sourceTree = "<group>"; };
+		F0107F8F1DACA4FC003589BA /* TrackComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrackComponent.h; sourceTree = "<group>"; };
+		F0107F901DACA5AD003589BA /* TrackComponent.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TrackComponent.mm; sourceTree = "<group>"; };
+		F0107F921DACA72B003589BA /* TrackContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackContext.h; sourceTree = "<group>"; };
+		F0107F931DACA72B003589BA /* TrackContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackContext.m; sourceTree = "<group>"; };
 		F04725861DA9C7B700DD001B /* LastFMAccessManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LastFMAccessManager.h; sourceTree = "<group>"; };
 		F04725871DA9C7B700DD001B /* LastFMAccessManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LastFMAccessManager.m; sourceTree = "<group>"; };
 		F04725881DA9C7B700DD001B /* LastFMDataAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LastFMDataAccess.h; sourceTree = "<group>"; };
@@ -67,8 +73,8 @@
 		F04725951DA9C97D00DD001B /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		F04725961DA9C97D00DD001B /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		F04725971DA9C97D00DD001B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		F04725981DA9C97D00DD001B /* TopSongViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopSongViewController.h; sourceTree = "<group>"; };
-		F04725991DA9C97D00DD001B /* TopSongViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopSongViewController.m; sourceTree = "<group>"; };
+		F04725981DA9C97D00DD001B /* TopSongCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopSongCollectionViewController.h; sourceTree = "<group>"; };
+		F04725991DA9C97D00DD001B /* TopSongCollectionViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TopSongCollectionViewController.mm; sourceTree = "<group>"; };
 		F0E2BFD31DA6A73900A69C11 /* TopSong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopSong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0E2BFD71DA6A73900A69C11 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F0E2BFD91DA6A73900A69C11 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -139,6 +145,15 @@
 			path = DataModels;
 			sourceTree = "<group>";
 		};
+		F0107F8E1DACA4B1003589BA /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F0107F8F1DACA4FC003589BA /* TrackComponent.h */,
+				F0107F901DACA5AD003589BA /* TrackComponent.mm */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		F04725851DA9C78300DD001B /* DataAccess */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,14 +179,17 @@
 		F04725931DA9C91500DD001B /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				F0107F8E1DACA4B1003589BA /* Components */,
 				F04725941DA9C97D00DD001B /* Assets.xcassets */,
 				F0107F7D1DA9CB08003589BA /* LaunchScreen.storyboard */,
 				F0107F7C1DA9CB08003589BA /* Login.storyboard */,
 				F04725971DA9C97D00DD001B /* Main.storyboard */,
 				F04725951DA9C97D00DD001B /* LoginViewController.h */,
 				F04725961DA9C97D00DD001B /* LoginViewController.m */,
-				F04725981DA9C97D00DD001B /* TopSongViewController.h */,
-				F04725991DA9C97D00DD001B /* TopSongViewController.m */,
+				F04725981DA9C97D00DD001B /* TopSongCollectionViewController.h */,
+				F04725991DA9C97D00DD001B /* TopSongCollectionViewController.mm */,
+				F0107F921DACA72B003589BA /* TrackContext.h */,
+				F0107F931DACA72B003589BA /* TrackContext.m */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -439,14 +457,16 @@
 			files = (
 				F047258B1DA9C7B700DD001B /* LastFMDataAccess.m in Sources */,
 				F04725921DA9C8E500DD001B /* NSString+MD5.m in Sources */,
+				F0107F911DACA5AD003589BA /* TrackComponent.mm in Sources */,
 				F0E2BFDB1DA6A73900A69C11 /* AppDelegate.m in Sources */,
 				F047259B1DA9C97D00DD001B /* LoginViewController.m in Sources */,
 				F0107F831DA9CB6F003589BA /* Track.m in Sources */,
 				F0107F891DA9EA2B003589BA /* ImageUrl.m in Sources */,
+				F0107F941DACA72B003589BA /* TrackContext.m in Sources */,
 				F04725911DA9C8E500DD001B /* KeychainWrapper.m in Sources */,
 				F047258A1DA9C7B700DD001B /* LastFMAccessManager.m in Sources */,
 				F0E2BFD81DA6A73900A69C11 /* main.m in Sources */,
-				F047259D1DA9C97D00DD001B /* TopSongViewController.m in Sources */,
+				F047259D1DA9C97D00DD001B /* TopSongCollectionViewController.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
