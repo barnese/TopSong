@@ -1,6 +1,6 @@
 //
 //  TrackComponent.h
-//  TopSong
+//  Component for an individual track.
 //
 //  Created by Eric Barnes on 10/10/16.
 //  Copyright © 2016 mteric.com. All rights reserved.
