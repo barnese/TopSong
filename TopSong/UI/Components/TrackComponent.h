@@ -6,7 +6,11 @@
 //  Copyright © 2016 mteric.com. All rights reserved.
 //
 
+// Ignore the documentation warnings caused by ComponentKit.
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdocumentation"
 #import <ComponentKit/ComponentKit.h>
+#pragma clang pop
 
 @class Track;
 @class TrackContext;

@@ -7,9 +7,6 @@
 //
 
 #import "TopSongCollectionViewController.h"
-
-#import <ComponentKit/ComponentKit.h>
-
 #import "LastFMDataAccess.h"
 #import "LoginViewController.h"
 #import "TrackComponent.h"
