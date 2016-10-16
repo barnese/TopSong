@@ -129,19 +129,19 @@ NSString *const kErrorDomain = @"DataAccess";
                 for (NSDictionary *responseImage in responseImages) {
                     NSString *url = [responseImage objectForKey:@"#text"];
                     NSString *size = [responseImage objectForKey:@"size"];
-                    NSInteger imageUrlSize;
+                    NSInteger imageURLSize;
                     
                     if ([size isEqualToString:@"small"]) {
-                        imageUrlSize = ImageUrlSizeSmall;
+                        imageURLSize = ImageURLSizeSmall;
                     } else if ([size isEqualToString:@"medium"]) {
-                        imageUrlSize = ImageUrlSizeMedium;
+                        imageURLSize = ImageURLSizeMedium;
                     } else if ([size isEqualToString:@"large"]) {
-                        imageUrlSize = ImageUrlSizeLarge;
+                        imageURLSize = ImageURLSizeLarge;
                     } else if ([size isEqualToString:@"extralarge"]) {
-                        imageUrlSize = ImageUrlSizeExtraLarge;
+                        imageURLSize = ImageURLSizeExtraLarge;
                     }
 
-                    [track addImage:[[TSImageUrl alloc] initWithUrl:url size:imageUrlSize]];
+                    [track addImage:[[TSImageURL alloc] initWithURL:url size:imageURLSize]];
                 }
                 
                 [tracks addObject:track];

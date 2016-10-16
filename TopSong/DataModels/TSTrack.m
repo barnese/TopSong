@@ -30,8 +30,21 @@
     return self;
 }
 
-- (void)addImage:(TSImageUrl *)image {
+- (void)addImage:(TSImageURL *)image {
     [_images addObject:image];
+}
+
+- (NSString *)imageURLForSize:(TSImageURLSize)size {
+    NSString *url = nil;
+    
+    for (TSImageURL *imageURL in self.images) {
+        if (imageURL.size == size) {
+            url = imageURL.url;
+            break;
+        }
+    }
+    
+    return url;
 }
 
 @end

@@ -10,4 +10,9 @@
 
 @implementation TSTrackContext
 
+- (UIImage *)imageWithURL:(NSString *)url {
+    NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
+    return [[UIImage alloc] initWithData:data];
+}
+
 @end

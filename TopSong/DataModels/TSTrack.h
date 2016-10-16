@@ -21,6 +21,7 @@
           playCount:(NSInteger)playCount
                rank:(NSInteger)rank;
 
-- (void)addImage:(TSImageUrl *)image;
+- (void)addImage:(TSImageURL *)image;
+- (NSString *)imageURLForSize:(TSImageURLSize)size;
 
 @end

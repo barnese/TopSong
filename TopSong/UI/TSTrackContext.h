@@ -6,8 +6,10 @@
 //  Copyright © 2016 mteric.com. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface TSTrackContext : NSObject
+
+- (UIImage *)imageWithURL:(NSString *)url;
 
 @end
