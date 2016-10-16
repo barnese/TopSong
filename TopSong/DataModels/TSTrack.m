@@ -1,14 +1,14 @@
 //
-//  Track.m
+//  TSTrack.m
 //  Track data model.
 //
 //  Created by Eric Barnes on 10/8/16.
 //  Copyright © 2016 mteric.com. All rights reserved.
 //
 
-#import "Track.h"
+#import "TSTrack.h"
 
-@implementation Track
+@implementation TSTrack
 
 - (id)initWithTitle:(NSString *)title
              artist:(NSString *)artist
@@ -30,7 +30,7 @@
     return self;
 }
 
-- (void)addImage:(ImageUrl *)image {
+- (void)addImage:(TSImageUrl *)image {
     [_images addObject:image];
 }
 

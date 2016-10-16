@@ -1,17 +1,17 @@
 //
-//  LastFMAccessManager.m
+//  TSLastFMAccessManager.m
 //  Singleton containing keys for Last.fm API access.
 //
 //  Created by Eric Barnes on 10/6/16.
 //  Copyright © 2016 mteric.com. All rights reserved.
 //
 
-#import "LastFMAccessManager.h"
+#import "TSLastFMAccessManager.h"
 
-@implementation LastFMAccessManager
+@implementation TSLastFMAccessManager
 
 + (id)sharedManager {
-    static LastFMAccessManager *_sharedInstance = nil;
+    static TSLastFMAccessManager *_sharedInstance = nil;
     static dispatch_once_t oncePredicate;
     dispatch_once(&oncePredicate, ^{
         _sharedInstance = [[self alloc] init];

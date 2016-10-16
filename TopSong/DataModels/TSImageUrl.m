@@ -1,16 +1,16 @@
 //
-//  ImageUrl.m
+//  TSImageUrl.m
 //  Data model representing an image with URL and size.
 //
 //  Created by Eric Barnes on 10/8/16.
 //  Copyright © 2016 mteric.com. All rights reserved.
 //
 
-#import "ImageUrl.h"
+#import "TSImageUrl.h"
 
-@implementation ImageUrl
+@implementation TSImageUrl
 
-- (id)initWithUrl:(NSString *)url size:(ImageUrlSize)size {
+- (id)initWithUrl:(NSString *)url size:(TSImageUrlSize)size {
     self = [super init];
     
     if (self) {

@@ -1,5 +1,5 @@
 //
-//  TopSongCollectionViewController.h
+//  TSMostPlayedCollectionViewController.h
 //  TopSong
 //
 //  Created by Eric Barnes on 10/6/16.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TopSongCollectionViewController : UICollectionViewController
+@interface TSMostPlayedCollectionViewController : UICollectionViewController
 
 @end

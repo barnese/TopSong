@@ -5,36 +5,27 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Top Song-->
+        <!--Most Played-->
         <scene sceneID="NrI-SJ-1iQ">
             <objects>
-                <collectionViewController id="Hg0-Rj-A9E" customClass="TopSongCollectionViewController" sceneMemberID="viewController">
+                <collectionViewController id="Hg0-Rj-A9E" customClass="TSMostPlayedCollectionViewController" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Zx4-We-bGL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="E6l-7s-WbX">
-                            <size key="itemSize" width="50" height="50"/>
+                            <size key="itemSize" width="0.0" height="0.0"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="1Ee-3d-8fC">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </view>
-                            </collectionViewCell>
-                        </cells>
+                        <cells/>
                         <connections>
                             <outlet property="dataSource" destination="Hg0-Rj-A9E" id="N7b-Ed-Tn1"/>
                             <outlet property="delegate" destination="Hg0-Rj-A9E" id="H6v-xe-LDb"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Top Song" id="ytg-Bb-Bbp"/>
+                    <navigationItem key="navigationItem" title="Most Played" id="ytg-Bb-Bbp"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eW1-aR-jhb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "TopSongCollectionViewController.h"
+#import "TSMostPlayedCollectionViewController.h"
 
 @interface AppDelegate ()
 
@@ -18,20 +18,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    // Temporarily bypass Main storyboard to get collection view controller to load correctly with ComponentKit.
-    // TODO: make storyboard work correctly.
-    _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    
-    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
-    [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
-    [flowLayout setMinimumInteritemSpacing:0];
-    [flowLayout setMinimumLineSpacing:0];
-    
-    TopSongCollectionViewController *viewController = [[TopSongCollectionViewController alloc] initWithCollectionViewLayout:flowLayout];
-    
-    [_window setRootViewController:[[UINavigationController alloc] initWithRootViewController:viewController]];
-    [_window makeKeyAndVisible];
-
     return YES;
 }
 

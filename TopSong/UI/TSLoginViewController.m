@@ -1,15 +1,15 @@
 //
-//  LoginViewController.m
+//  TSLoginViewController.m
 //  TopSong
 //
 //  Created by Eric Barnes on 10/6/16.
 //  Copyright © 2016 mteric.com. All rights reserved.
 //
 
-#import "LoginViewController.h"
-#import "LastFMDataAccess.h"
+#import "TSLoginViewController.h"
+#import "TSLastFMDataAccess.h"
 
-@interface LoginViewController ()
+@interface TSLoginViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *messageLabel;
 @property (weak, nonatomic) IBOutlet UITextField *userNameTextField;
@@ -20,7 +20,7 @@
 
 @end
 
-@implementation LoginViewController
+@implementation TSLoginViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -39,7 +39,7 @@
         return;
     }
 
-    [LastFMDataAccess loginWithUserName:userName andPassword:password success:^{
+    [TSLastFMDataAccess loginWithUserName:userName andPassword:password success:^{
         [self.delegate loginViewControllerDidFinish];
     } failure:^(NSError *error) {
         NSLog(@"Error: %@", error); // TODO

@@ -1,5 +1,5 @@
 //
-//  Track.h
+//  TSTrack.h
 //  Track data model.
 //
 //  Created by Eric Barnes on 10/8/16.
@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ImageUrl.h"
+#import "TSImageUrl.h"
 
-@interface Track : NSObject
+@interface TSTrack : NSObject
 
 @property (nonatomic, assign, readonly) NSInteger rank, playCount;
 @property (nonatomic, copy, readonly) NSString *title, *artist, *trackUrl;
@@ -21,6 +21,6 @@
           playCount:(NSInteger)playCount
                rank:(NSInteger)rank;
 
-- (void)addImage:(ImageUrl *)image;
+- (void)addImage:(TSImageUrl *)image;
 
 @end

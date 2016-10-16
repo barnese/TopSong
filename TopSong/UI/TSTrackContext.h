@@ -1,5 +1,5 @@
 //
-//  TrackContext.h
+//  TSTrackContext.h
 //  The context is used to pass data or external dependencies to the component tree.
 //
 //  Created by Eric Barnes on 10/10/16.
@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface TrackContext : NSObject
+@interface TSTrackContext : NSObject
 
 @end

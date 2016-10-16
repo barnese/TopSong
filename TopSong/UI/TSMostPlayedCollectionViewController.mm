@@ -1,44 +1,36 @@
 //
-//  TopSongCollectionViewController.mm
+//  TSMostPlayedCollectionViewController.mm
 //  TopSong
 //
 //  Created by Eric Barnes on 10/6/16.
 //  Copyright © 2016 mteric.com. All rights reserved.
 //
 
-#import "TopSongCollectionViewController.h"
-#import "LastFMDataAccess.h"
-#import "LoginViewController.h"
-#import "TrackComponent.h"
-#import "TrackContext.h"
+#import "TSMostPlayedCollectionViewController.h"
+#import "TSLastFMDataAccess.h"
+#import "TSLoginViewController.h"
+#import "TSTrackComponent.h"
+#import "TSTrackContext.h"
 
-@interface TopSongCollectionViewController() <CKComponentProvider, UICollectionViewDelegateFlowLayout, LoginViewControllerDelegate>
+@interface TSMostPlayedCollectionViewController() <CKComponentProvider, UICollectionViewDelegateFlowLayout, TSLoginViewControllerDelegate>
 
 @end
 
-@implementation TopSongCollectionViewController {
+@implementation TSMostPlayedCollectionViewController {
     CKCollectionViewDataSource *_dataSource;
     CKComponentFlexibleSizeRangeProvider *_sizeRangeProvider;
 }
 
-- (instancetype)initWithCollectionViewLayout:(UICollectionViewLayout *)layout {
-    if (self = [super initWithCollectionViewLayout:layout]) {
-        _sizeRangeProvider = [CKComponentFlexibleSizeRangeProvider providerWithFlexibility:CKComponentSizeRangeFlexibleHeight];
-    
-        self.title = @"Top Song";
-    }
-    
-    return self;
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
+    _sizeRangeProvider = [CKComponentFlexibleSizeRangeProvider providerWithFlexibility:CKComponentSizeRangeFlexibleHeight];
+
     self.collectionView.backgroundColor = [UIColor whiteColor];
     self.collectionView.delegate = self;
     
     // Create the data source and attach the collection view to it.
-    TrackContext *context = [[TrackContext alloc] init];
+    TSTrackContext *context = [[TSTrackContext alloc] init];
     _dataSource = [[CKCollectionViewDataSource alloc] initWithCollectionView:self.collectionView
                                                  supplementaryViewDataSource:nil
                                                            componentProvider:[self class]
@@ -70,7 +62,7 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *userName = [defaults objectForKey:@"UserName"];
     
-    [LastFMDataAccess getTopTracksForUserName:userName success:^(NSArray *tracks) {
+    [TSLastFMDataAccess getTopTracksForUserName:userName success:^(NSArray *tracks) {
         // Convert the received tracks to a valid changeset.
         CKArrayControllerInputItems items;
         
@@ -88,15 +80,15 @@
 
 - (void)launchLoginViewController {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
-    LoginViewController *viewController = [storyboard instantiateInitialViewController];
+    TSLoginViewController *viewController = [storyboard instantiateInitialViewController];
     viewController.delegate = self;
     [self.navigationController presentViewController:viewController animated:YES completion:nil];
 }
 
 #pragma mark - CKComponentProvider
 
-+ (CKComponent *)componentForModel:(Track *)track context:(TrackContext *)context {
-    return [TrackComponent newWithTrack:track context:context];
++ (CKComponent *)componentForModel:(Track *)track context:(TSTrackContext *)context {
+    return [TSTrackComponent newWithTrack:track context:context];
 }
 
 #pragma mark - UICollectionViewDelegateFlowLayout
@@ -113,7 +105,7 @@
     [_dataSource announceDidDisappearForItemInCell:cell];
 }
 
-#pragma mark - LoginViewControllerDelegate
+#pragma mark - TSLoginViewControllerDelegate
 
 - (void)loginViewControllerDidFinish {
     [self.navigationController dismissViewControllerAnimated:YES completion:^{

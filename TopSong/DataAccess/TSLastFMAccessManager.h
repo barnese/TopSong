@@ -1,5 +1,5 @@
 //
-//  LastFMAccessManager.h
+//  TSLastFMAccessManager.h
 //  Singleton containing keys for Last.fm API access.
 //
 //  Created by Eric Barnes on 10/6/16.
@@ -8,7 +8,7 @@
 
 #import <foundation/Foundation.h>
 
-@interface LastFMAccessManager : NSObject {
+@interface TSLastFMAccessManager : NSObject {
 }
 
 @property (nonatomic, retain) NSString *apiKey;

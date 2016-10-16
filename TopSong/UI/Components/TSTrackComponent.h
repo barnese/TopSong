@@ -1,5 +1,5 @@
 //
-//  TrackComponent.h
+//  TSTrackComponent.h
 //  Component for an individual track.
 //
 //  Created by Eric Barnes on 10/10/16.
@@ -13,10 +13,10 @@
 #pragma clang pop
 
 @class Track;
-@class TrackContext;
+@class TSTrackContext;
 
-@interface TrackComponent : CKCompositeComponent
+@interface TSTrackComponent : CKCompositeComponent
 
-+ (instancetype)newWithTrack:(Track *)track context:(TrackContext *)context;
++ (instancetype)newWithTrack:(Track *)track context:(TSTrackContext *)context;
 
 @end

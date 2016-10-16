@@ -1,5 +1,5 @@
 //
-//  ImageUrl.h
+//  TSImageUrl.h
 //  Data model representing an image with URL and size.
 //
 //  Created by Eric Barnes on 10/8/16.
@@ -8,18 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
-typedef NS_ENUM(NSInteger, ImageUrlSize) {
+typedef NS_ENUM(NSInteger, TSImageUrlSize) {
     ImageUrlSizeSmall,
     ImageUrlSizeMedium,
     ImageUrlSizeLarge,
     ImageUrlSizeExtraLarge
 };
 
-@interface ImageUrl : NSObject
+@interface TSImageUrl : NSObject
 
 @property (nonatomic, copy, readonly) NSString *url;
-@property (nonatomic, assign, readonly) ImageUrlSize size;
+@property (nonatomic, assign, readonly) TSImageUrlSize size;
 
-- (id)initWithUrl:(NSString *)url size:(ImageUrlSize)size;
+- (id)initWithUrl:(NSString *)url size:(TSImageUrlSize)size;
 
 @end

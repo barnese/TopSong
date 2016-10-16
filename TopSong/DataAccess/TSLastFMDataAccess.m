@@ -1,19 +1,19 @@
 //
-//  LastFMDataAccess.m
+//  TSLastFMDataAccess.m
 //  TopSong
 //
 //  Created by Eric Barnes on 10/6/16.
 //  Copyright © 2016 mteric.com. All rights reserved.
 //
 
-#import "LastFMDataAccess.h"
-#import "LastFMAccessManager.h"
+#import "TSLastFMDataAccess.h"
+#import "TSLastFMAccessManager.h"
 #import "NSString+MD5.h"
 #import "AFNetworking.h"
 #import "KeychainWrapper.h"
-#import "Track.h"
+#import "TSTrack.h"
 
-@interface LastFMDataAccess()
+@interface TSLastFMDataAccess()
 
 // Generates an MD5 hashed signature for Last.fm API calls.
 + (NSString *)generateApiSigForParameters:(NSDictionary *)parameters;
@@ -23,7 +23,7 @@
 NSString *const kLastFMRootURL = @"https://ws.audioscrobbler.com/2.0/";
 NSString *const kErrorDomain = @"DataAccess";
 
-@implementation LastFMDataAccess
+@implementation TSLastFMDataAccess
 
 + (NSString *)generateApiSigForParameters:(NSDictionary *)parameters {
     NSMutableString *apiSig = [[NSMutableString alloc] init];
@@ -35,7 +35,7 @@ NSString *const kErrorDomain = @"DataAccess";
         [apiSig appendString:[NSString stringWithFormat:@"%@%@", key, [parameters objectForKey:key]]];
     }
     
-    LastFMAccessManager *lastFM = [LastFMAccessManager sharedManager];
+    TSLastFMAccessManager *lastFM = [TSLastFMAccessManager sharedManager];
     
     // Append the secret to the signature.
     [apiSig appendString:lastFM.apiSecret];
@@ -49,7 +49,7 @@ NSString *const kErrorDomain = @"DataAccess";
                   success:(void (^)(void))success
                   failure:(void (^)(NSError *))failure {
     
-    LastFMAccessManager *lastFM = [LastFMAccessManager sharedManager];
+    TSLastFMAccessManager *lastFM = [TSLastFMAccessManager sharedManager];
     
     NSMutableDictionary *parameters = [[NSMutableDictionary alloc] init];
     
@@ -102,7 +102,7 @@ NSString *const kErrorDomain = @"DataAccess";
                         success:(void (^)(NSArray *))success
                         failure:(void (^)(NSError *))failure {
     
-    LastFMAccessManager *lastFM = [LastFMAccessManager sharedManager];
+    TSLastFMAccessManager *lastFM = [TSLastFMAccessManager sharedManager];
 
     NSString *url = [NSString stringWithFormat:@"%@?method=user.gettoptracks&username=%@&limit=10&api_key=%@&format=json",
                      kLastFMRootURL, userName, lastFM.apiKey];
@@ -123,7 +123,7 @@ NSString *const kErrorDomain = @"DataAccess";
                 NSInteger playCount = [[responseTrack objectForKey:@"playcount"] integerValue];
                 NSInteger rank = [[[responseTrack objectForKey:@"@attr"] objectForKey:@"rank"] integerValue];
                 
-                Track *track = [[Track alloc] initWithTitle:name artist:artist trackUrl:trackUrl playCount:playCount rank:rank];
+                TSTrack *track = [[TSTrack alloc] initWithTitle:name artist:artist trackUrl:trackUrl playCount:playCount rank:rank];
 
                 NSArray *responseImages = [responseTrack objectForKey:@"image"];
                 for (NSDictionary *responseImage in responseImages) {
@@ -141,7 +141,7 @@ NSString *const kErrorDomain = @"DataAccess";
                         imageUrlSize = ImageUrlSizeExtraLarge;
                     }
 
-                    [track addImage:[[ImageUrl alloc] initWithUrl:url size:imageUrlSize]];
+                    [track addImage:[[TSImageUrl alloc] initWithUrl:url size:imageUrlSize]];
                 }
                 
                 [tracks addObject:track];

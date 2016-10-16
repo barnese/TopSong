@@ -1,5 +1,5 @@
 //
-//  LastFMDataAccess.h
+//  TSLastFMDataAccess.h
 //  TopSong
 //
 //  Created by Eric Barnes on 10/6/16.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface LastFMDataAccess : NSObject
+@interface TSLastFMDataAccess : NSObject
 
 + (void)loginWithUserName:(NSString *)userName andPassword:(NSString *)password
                   success:(void (^)(void))success
