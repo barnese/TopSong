@@ -14,6 +14,7 @@
 		F0107F911DACA5AD003589BA /* TSTrackComponent.mm in Sources */ = {isa = PBXBuildFile; fileRef = F0107F901DACA5AD003589BA /* TSTrackComponent.mm */; };
 		F0107F941DACA72B003589BA /* TSTrackContext.m in Sources */ = {isa = PBXBuildFile; fileRef = F0107F931DACA72B003589BA /* TSTrackContext.m */; };
 		F040DDBE1DB33A7F001D45AC /* TSTrackImageComponent.mm in Sources */ = {isa = PBXBuildFile; fileRef = F040DDBD1DB33A7F001D45AC /* TSTrackImageComponent.mm */; };
+		F040DDC11DB346EE001D45AC /* TSImageURL.m in Sources */ = {isa = PBXBuildFile; fileRef = F040DDC01DB346EE001D45AC /* TSImageURL.m */; };
 		F047258A1DA9C7B700DD001B /* TSLastFMAccessManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F04725871DA9C7B700DD001B /* TSLastFMAccessManager.m */; };
 		F047258B1DA9C7B700DD001B /* TSLastFMDataAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = F04725891DA9C7B700DD001B /* TSLastFMDataAccess.m */; };
 		F04725911DA9C8E500DD001B /* KeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = F047258E1DA9C8E500DD001B /* KeychainWrapper.m */; };
@@ -61,6 +62,8 @@
 		F0107F931DACA72B003589BA /* TSTrackContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTrackContext.m; sourceTree = "<group>"; };
 		F040DDBC1DB33A3E001D45AC /* TSTrackImageComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSTrackImageComponent.h; sourceTree = "<group>"; };
 		F040DDBD1DB33A7F001D45AC /* TSTrackImageComponent.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TSTrackImageComponent.mm; sourceTree = "<group>"; };
+		F040DDBF1DB346EE001D45AC /* TSImageURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSImageURL.h; sourceTree = "<group>"; };
+		F040DDC01DB346EE001D45AC /* TSImageURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSImageURL.m; sourceTree = "<group>"; };
 		F04725861DA9C7B700DD001B /* TSLastFMAccessManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSLastFMAccessManager.h; sourceTree = "<group>"; };
 		F04725871DA9C7B700DD001B /* TSLastFMAccessManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSLastFMAccessManager.m; sourceTree = "<group>"; };
 		F04725881DA9C7B700DD001B /* TSLastFMDataAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSLastFMDataAccess.h; sourceTree = "<group>"; };
@@ -139,6 +142,8 @@
 			children = (
 				F0107F811DA9CB6F003589BA /* TSTrack.h */,
 				F0107F821DA9CB6F003589BA /* TSTrack.m */,
+				F040DDBF1DB346EE001D45AC /* TSImageURL.h */,
+				F040DDC01DB346EE001D45AC /* TSImageURL.m */,
 			);
 			path = DataModels;
 			sourceTree = "<group>";
@@ -457,6 +462,7 @@
 			files = (
 				F047258B1DA9C7B700DD001B /* TSLastFMDataAccess.m in Sources */,
 				F04725921DA9C8E500DD001B /* NSString+MD5.m in Sources */,
+				F040DDC11DB346EE001D45AC /* TSImageURL.m in Sources */,
 				F0107F911DACA5AD003589BA /* TSTrackComponent.mm in Sources */,
 				F0E2BFDB1DA6A73900A69C11 /* AppDelegate.m in Sources */,
 				F047259B1DA9C97D00DD001B /* TSLoginViewController.m in Sources */,
